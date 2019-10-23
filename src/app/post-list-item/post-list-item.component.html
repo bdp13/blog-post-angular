@@ -1,0 +1,9 @@
+<li [ngClass]="{'list-group-item': true,
+        'list-group-item-success': postLoveIts > 0,
+        'list-group-item-danger': postLoveIts < 0 }" *ngIf="!deleted">
+    <h4>{{ postTitre }}  <span style="position:absolute;right:10px;" > {{ postDate | date: 'M/d/yyyy, hh:mm aa' }} </span> </h4> 
+    <h5>{{ postContent }}</h5>    
+    <button class="btn btn-success" (click)="onLike()" >love it !!!</button>
+    <button class="btn btn-danger"  (click)="onDontLike()" >Don't love it !!!</button>
+    <button class="btn btn-danger" style="position:absolute;right:10px;" (click)="onDelete()" >Supprimer</button>
+ </li>
